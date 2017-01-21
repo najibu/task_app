@@ -10,8 +10,9 @@ class TasksController extends Controller
 {
     public function index()
     {
-      
-      return view('tasks.index');
+      $tasks = Task::all();
+
+      return view('tasks.index')->withTasks($tasks);
     }
 
     public function create()
