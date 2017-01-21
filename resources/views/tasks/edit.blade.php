@@ -11,6 +11,8 @@
     'route' => ['tasks.update', $task->id]
   ]) !!}
 
+  @include('partials.errors')
+
   <div class="form-group">
       {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}
       {!! Form::text('title', null, ['class' => 'form-control']) !!}
