@@ -42,4 +42,11 @@ class TasksController extends Controller
 
       return view('tasks.show')->withTask($task);
     }
+
+    public function edit($id)
+    {
+      $task = Task::findOrFail($id);
+      
+      return view('tasks.edit')->withTask($task);
+    }
 }
